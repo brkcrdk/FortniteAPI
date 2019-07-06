@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-const setUrl = "https://fortnite-api.theapinetwork.com/store/get";
+const setUrl = "https://fortnite-api.theapinetwork.com/voting/list";
 
-function useStoreFetcher() {
+function useVoteFetcher() {
   // api den ne çekilecekse ona göre isim değişikliği yap
-  const [store, setStore] = useState([]);
+  const [votes, setVotes] = useState([]);
   //Buradan sonraki stateler fetch için
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,8 +25,8 @@ function useStoreFetcher() {
           throw Error("Error fetching tracks!");
         }
       })
-      .then(store => {
-        setStore(store.data);
+      .then(votes => {
+        setVotes(votes.data);
         setIsLoading(false);
       })
       .catch(error => {
@@ -34,7 +34,7 @@ function useStoreFetcher() {
       });
   }, []);
   //gönderilecek parametreleri seç
-  return { store, isLoading, error };
+  return { votes, isLoading, error };
 }
 
-export default useStoreFetcher;
+export default useVoteFetcher;

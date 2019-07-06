@@ -31,3 +31,12 @@
 .fas {
   color: gold;
 }
+
+.new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5em;
+  height: 5em;
+  transition: 1s;
+}

@@ -1,0 +1,24 @@
+/* DİKKAT: News sayfası içindeki tüm sitilleri buradan yönlendir */
+
+.carousel {
+  margin-top: 2em;
+  float: right;
+  opacity: 0.9;
+}
+
+/* slayt içindeki resimlerin boyutu belirlendi */
+.carousel img {
+  border-radius: 0.4em;
+  margin: 0.3em;
+  opacity: 1;
+  height: 6em;
+  width: 12em;
+}
+
+/* Buradaki kod slayt içindeki okların görünmemesi ve o alanın tıklanamaması için yazıldı */
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  top: 50%;
+  bottom: 50%;
+  visibility: hidden;
+}
