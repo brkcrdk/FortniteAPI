@@ -8,7 +8,7 @@ export default function BrNews() {
       <ul className="list-unstyled">
         {newBr
           .filter((item, index) => {
-            return index < 5;
+            return index < 3;
           })
           .map((item, i) => (
             <li key={i} className="media">

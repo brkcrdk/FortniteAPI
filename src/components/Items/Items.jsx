@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import useItemFetcher from "./fetchItems";
 import "./Items.css";
 import InfiniteScroll from "react-infinite-scroll-component";
+
 export default function Items() {
-  const { items } = useItemFetcher();
+  const { items, isLoading } = useItemFetcher();
   const [displayItems, setDisplayItems] = useState([]);
   const [isFetching, setFetching] = useState(false);
   const time = new Date();
-
+  console.log(isFetching);
   useEffect(() => {
     //Filtre konacaksa buradan olacak
     setDisplayItems(items.slice(0, 16));
@@ -28,7 +29,13 @@ export default function Items() {
       hasMore={true}
       next={fetchMore}
       dataLength={displayItems.length}
-      loader={<h4>Loading...</h4>}
+      loader={
+        <h4 className="spin text-center">
+          <div className="spinner-border" role="status">
+            <span className="sr-only" />
+          </div>
+        </h4>
+      }
     >
       <div className="container-fluid">
         <div className="row">

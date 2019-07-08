@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Info from "./Info/Info";
-import News from "./News/News";
+// import News from "./News/News";
 import Votes from "./Votes/Votes";
+import UpcomingItems from "./UpcomingItems/Upcoming";
 export default function Home() {
   return (
     <div className="container-fluid">
@@ -14,7 +15,7 @@ export default function Home() {
           <Votes />
         </div>
         <div className="col-md-6">
-          <News />
+          <UpcomingItems />
         </div>
       </div>
     </div>
