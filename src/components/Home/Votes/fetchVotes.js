@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 
-const setUrl = "https://fortnite-api.theapinetwork.com/voting/list";
+const setUrl = "";
 
 function useVoteFetcher() {
-  // api den ne çekilecekse ona göre isim değişikliği yap
   const [votes, setVotes] = useState([]);
-  //Buradan sonraki stateler fetch için
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  //fetching data
   useEffect(() => {
     setIsLoading(true);
     fetch(setUrl, {
@@ -33,7 +30,6 @@ function useVoteFetcher() {
         setError(error);
       });
   }, []);
-  //gönderilecek parametreleri seç
   return { votes, isLoading, error };
 }
 

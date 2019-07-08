@@ -2,11 +2,11 @@
   padding: 0.1em;
   margin-top: 5em;
 }
-.col-md-4 {
+.col-md-3 {
   position: relative;
-  padding: 1.5em;
+  padding: 1em;
 }
-.col-md-4:hover .hover-texts {
+.col-md-3:hover .hover-texts {
   visibility: visible;
   opacity: 1;
 }
@@ -21,7 +21,7 @@
   opacity: 0;
   transition: 1.1s;
 }
-.col-md-4:hover .card img {
+.col-md-3:hover .card img {
   transition: 1s;
   opacity: 0.5;
 }

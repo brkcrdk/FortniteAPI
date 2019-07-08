@@ -9,7 +9,7 @@ export default function Store() {
       {!isLoading ? (
         <div className="row">
           {store.map((items, i) => (
-            <div key={i} className="col-md-4">
+            <div key={i} className="col-md-3">
               <div className="card">
                 {items.store.isNew ? (
                   <img

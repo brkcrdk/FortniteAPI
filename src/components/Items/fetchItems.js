@@ -1,32 +1,43 @@
 import { useState, useEffect } from "react";
 
-const setUrl = "https://fortnite-api.theapinetwork.com/stw_motd/get";
+const setUrl = "https://fortnite-api.theapinetwork.com/items/list";
 
 function useItemFetcher() {
-  // api den ne çekilecekse ona göre isim değişikliği yap
-  const [item, setItem] = useState([]);
-  //Buradan sonraki stateler fetch için
+  const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  //fetching data
   useEffect(() => {
-    setIsLoading(true);
-    fetchItems();
-    setIsLoading(false);
-  }, []);
-
-  const fetchItems = async () => {
-    const data = await fetch(setUrl, {
-      method: "GET",
-      headers: {
-        Authorization: "38b07317ac7a38c1984131516b70834c"
+    let controller = new AbortController();
+    const fetchItems = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch(
+          setUrl,
+          {
+            method: "GET",
+            headers: {
+              Authorization: "38b07317ac7a38c1984131516b70834c"
+            }
+          },
+          { signal: controller.signal }
+        );
+        const items = await response.json();
+        setItems(items.data);
+      } catch (error) {
+        if (error.name === "AbortError") {
+          console.log("ebort");
+        } else {
+          throw error;
+        }
       }
-    });
-    const items = await data.json();
-    setItem(items.data);
-  };
-  //gönderilecek parametreleri seç
-  return { item, isLoading };
-}
+      setIsLoading(false);
+    };
+    fetchItems();
 
+    return () => {
+      controller.abort();
+    };
+  }, []);
+  return { items, isLoading };
+}
 export default useItemFetcher;

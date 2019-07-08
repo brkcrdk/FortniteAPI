@@ -8,7 +8,7 @@ function useNewBrFetcher() {
 
   useEffect(() => {
     let controller = new AbortController();
-    const fetchStore = async () => {
+    const fetchNews = async () => {
       setIsLoading(true);
       try {
         const response = await fetch(
@@ -32,7 +32,7 @@ function useNewBrFetcher() {
       }
       setIsLoading(false);
     };
-    fetchStore();
+    fetchNews();
 
     return () => {
       controller.abort();

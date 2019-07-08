@@ -1,0 +1,12 @@
+.container-fluid {
+  margin-top: 5em;
+}
+.item-img {
+  height: 100%;
+  width: 100%;
+}
+button {
+  height: 5em;
+  width: 10em;
+  margin-bottom: 2em;
+}
