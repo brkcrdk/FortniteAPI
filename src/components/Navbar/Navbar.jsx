@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo1 from "./logo.ico";
 import "./Navbar.css";
-import Search from "./Search/Search";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  fixed-top">
@@ -38,9 +37,6 @@ export default function Navbar() {
             <Link to="/items" className="nav-link" href="?">
               Items
             </Link>
-          </li>
-          <li className="nav-item">
-            <Search />
           </li>
         </ul>
       </div>
