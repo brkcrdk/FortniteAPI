@@ -1,35 +1,12 @@
-.col-12 h1 {
-  font-family: "Luckiest Guy", cursive;
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+#info {
+  margin-top: 3.3em;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.3rem;
 }
-.col-12 p {
-  margin: 0.5em;
-  margin-top: 1.2em;
-}
-.col-12 button {
-  margin: 1em;
-}
-.haber {
-  color: #f3ccff;
-  font-weight: 500;
-  position: absolute;
-}
-.haber h1 {
-  color: #4d004d;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-}
-.haber h1 span {
-  font-weight: 900;
-}
-.haber button {
-  font-weight: 600;
-}
-.shop {
-  margin: 0.1em;
-}
-.shop button {
-  margin-left: 0.1em;
-}
-.col-12 {
-  margin-left: -0.5em;
+#info button {
+  width: 6em;
+  height: 3em;
+  padding: 0;
+  margin: 0 0 0 1em;
 }

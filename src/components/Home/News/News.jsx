@@ -1,28 +1,32 @@
 import React from "react";
 import "./News.css";
-import Carousel from "react-bootstrap/Carousel";
-import useNewBrFetcher from "./fetchBrNews";
+import useNewsFetcher from "./fetchNews";
 
-export default function News() {
-  const { newBr } = useNewBrFetcher();
+import Carousel from "react-bootstrap/Carousel";
+export default function BrNews() {
+  const { news } = useNewsFetcher();
   return (
     <div>
-      <Carousel id="new-container" fade="true">
-        {newBr
-          .filter((item, index) => {
-            return index < 3;
+      <h2 className="text-center text-danger baslik">NEWS</h2>
+      <hr />
+      <Carousel id="news-caro" wrap="true" fade="true">
+        {news
+          .filter((news, index) => {
+            return index < 6;
           })
-          .map((items, i) => (
+          .map((news, i) => (
             <Carousel.Item key={i}>
-              <img
-                className="d-block w-100"
-                src={items.image}
-                alt={items.title}
-              />
-              <Carousel.Caption>
-                <h3>{items.title}</h3>
-                <p>{items.body}</p>
-              </Carousel.Caption>
+              <React.Fragment>
+                <img
+                  className="d-block w-100"
+                  src={news.image}
+                  alt={news.title}
+                />
+                <Carousel.Caption>
+                  <h3>{news.title}</h3>
+                  <p>{news.body}</p>
+                </Carousel.Caption>
+              </React.Fragment>
             </Carousel.Item>
           ))}
       </Carousel>

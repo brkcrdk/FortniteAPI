@@ -1,30 +1,20 @@
-.col-md-4 img {
-  width: 10em;
-  height: 10em;
+h3 {
+  margin-top: -3em;
+  padding-bottom: 1em;
 }
-.upcoming {
-  margin-top: -4em;
+#carousel {
+  margin-bottom: -2em;
 }
-.col-md-4 {
-  position: relative;
-  padding: 0.5em;
+#carousel .card {
+  width: 10rem;
 }
-.col-md-4:hover .hover-texts {
-  visibility: visible;
-  opacity: 1;
+#carousel .card-body {
+  padding: 1em;
+  margin-bottom: 2em;
 }
-.hover-texts {
-  color: black;
-  text-transform: capitalize;
-  font-weight: 900;
-  position: absolute;
-  top: 10%;
-  left: 5%;
+#carousel .carousel-control-prev,
+#carousel .carousel-control-next {
+  top: 50%;
+  bottom: 50%;
   visibility: hidden;
-  opacity: 0;
-  transition: 1.1s;
-}
-.col-md-4:hover .card img {
-  transition: 1s;
-  opacity: 0.5;
 }

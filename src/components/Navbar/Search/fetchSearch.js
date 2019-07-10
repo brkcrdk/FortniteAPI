@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
-const setUrl = "https://fortnite-api.theapinetwork.com/stw_motd/get";
+const setUrl = "https://fortnite-api.theapinetwork.com/upcoming/get";
 
-function useNewStwFetcher() {
-  const [newStw, setNewStw] = useState([]);
+function useSearchFetcher() {
+  const [result, setResult] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     let controller = new AbortController();
-    const fetchNews = async () => {
+    const fetchResult = async () => {
       setIsLoading(true);
       try {
         const response = await fetch(
@@ -21,8 +21,8 @@ function useNewStwFetcher() {
           },
           { signal: controller.signal }
         );
-        const news = await response.json();
-        setNewStw(news.data);
+        const upcoming = await response.json();
+        setResult(upcoming.data);
       } catch (error) {
         if (error.name === "AbortError") {
           console.log("ebort");
@@ -32,12 +32,12 @@ function useNewStwFetcher() {
       }
       setIsLoading(false);
     };
-    fetchNews();
+    fetchResult();
 
     return () => {
       controller.abort();
     };
   }, []);
-  return { newStw, isLoading };
+  return { result, isLoading };
 }
-export default useNewStwFetcher;
+export default useSearchFetcher;

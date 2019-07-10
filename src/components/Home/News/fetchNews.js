@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 const setUrl = "https://fortnite-api.theapinetwork.com/br_motd/get";
 
-function useNewBrFetcher() {
-  const [newBr, setNewBr] = useState([]);
+function useNewsFetcher() {
+  const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function useNewBrFetcher() {
           { signal: controller.signal }
         );
         const news = await response.json();
-        setNewBr(news.data);
+        setNews(news.data);
       } catch (error) {
         if (error.name === "AbortError") {
           console.log("ebort");
@@ -38,6 +38,6 @@ function useNewBrFetcher() {
       controller.abort();
     };
   }, []);
-  return { newBr, isLoading };
+  return { news, isLoading };
 }
-export default useNewBrFetcher;
+export default useNewsFetcher;

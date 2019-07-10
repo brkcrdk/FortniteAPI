@@ -1,4 +1,7 @@
 .container-fluid {
   letter-spacing: 0.1em;
-  margin-top: 2em;
+  margin-top: 3.6em;
+}
+.baslik {
+  font-family: "Luckiest Guy", cursive;
 }

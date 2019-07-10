@@ -13,13 +13,15 @@ function App() {
   // };
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/store" component={Store} />
-          <Route path="/items" component={Items} />
-        </Switch>
+      <div className="container-fluid">
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/store" component={Store} />
+            <Route path="/items" component={Items} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );

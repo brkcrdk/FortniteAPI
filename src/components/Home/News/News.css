@@ -1,24 +1,18 @@
-/* DİKKAT: News sayfası içindeki tüm sitilleri buradan yönlendir */
-/* #new-container {
-  height: 100%;
-}
-.carousel {
-  margin-top: 2em;
-  opacity: 0.9;
-} */
-
-/* slayt içindeki resimlerin boyutu belirlendi */
-/* .carousel img {
-  border-radius: 0.5em;
-  margin: 0.3em;
-  opacity: 1;
-  height: 65vh;
-} */
-
-/* Buradaki kod slayt içindeki okların görünmemesi ve o alanın tıklanamaması için yazıldı */
-/* .carousel .carousel-control-prev,
-.carousel .carousel-control-next {
+#news-caro .carousel-control-prev,
+#news-caro .carousel-control-next {
   top: 50%;
   bottom: 50%;
   visibility: hidden;
-} */
+}
+
+#news-caro img {
+  border-radius: 1em;
+}
+#news-caro p,
+#news-caro h3 {
+  color: white;
+  text-shadow: 0.1em 0.1em purple;
+  opacity: 1;
+  font-size: 0.8em;
+  font-weight: 500;
+}

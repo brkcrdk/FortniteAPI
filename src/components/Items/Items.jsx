@@ -8,7 +8,6 @@ export default function Items() {
   const [displayItems, setDisplayItems] = useState([]);
   const [isFetching, setFetching] = useState(false);
   const time = new Date();
-  console.log(isFetching);
   useEffect(() => {
     //Filtre konacaksa buradan olacak
     setDisplayItems(items.slice(0, 16));
@@ -37,7 +36,7 @@ export default function Items() {
         </h4>
       }
     >
-      <div className="container-fluid">
+      <div className="container-fluid" id="item-container">
         <div className="row">
           {displayItems.map((items, i) => (
             <div className="col-md-3" key={i}>
