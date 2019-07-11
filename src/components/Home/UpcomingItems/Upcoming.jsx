@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 export default function PopularItems() {
   const { upcoming } = useUpcomingFetcher();
   return (
-    <div className="container">
+    <div className="container" id="upcoming">
       <h2 className="text-center text-warning baslik">Upcoming Items!!</h2>
       <hr />
       <Carousel id="carousel" wrap="true">

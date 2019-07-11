@@ -5,3 +5,43 @@
 .baslik {
   font-family: "Luckiest Guy", cursive;
 }
+
+@media (max-width: 575.98px) {
+  #home {
+    margin-left: -1em;
+    margin-top: 5em;
+  }
+  #home .col-12 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #home .col-12 img {
+    width: 20em;
+    height: 20em;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #home {
+    margin-top: 5em;
+  }
+  #home .row {
+    width: 100%;
+  }
+  #home .col-12 {
+    padding: 0;
+    margin: 1em;
+  }
+  #home .col-12 img {
+    width: 20em;
+    height: 20em;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #home {
+    margin-top: 5em;
+  }
+}

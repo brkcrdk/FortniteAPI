@@ -5,7 +5,7 @@ export default function Store() {
   const { store, isLoading } = useStoreFetcher();
   let time = new Date();
   return (
-    <div className="container">
+    <div className="container-fluid" id="store">
       {!isLoading ? (
         <div className="row">
           {store.map((items, i) => (
@@ -53,7 +53,11 @@ export default function Store() {
           ))}
         </div>
       ) : (
-        <h1>Please Wait...</h1>
+        <h4 className="spin text-center">
+          <div className="spinner-border" role="status">
+            <span className="sr-only" />
+          </div>
+        </h4>
       )}
     </div>
   );

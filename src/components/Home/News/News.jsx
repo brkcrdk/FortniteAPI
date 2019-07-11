@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 export default function BrNews() {
   const { news } = useNewsFetcher();
   return (
-    <div>
+    <div className="container-fluid">
       <h2 className="text-center text-danger baslik">NEWS</h2>
       <hr />
       <Carousel id="news-caro" wrap="true" fade="true">

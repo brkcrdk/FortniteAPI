@@ -42,3 +42,29 @@
   height: 5em;
   transition: 1s;
 }
+
+@media (max-width: 575.98px) {
+  #store {
+    margin-top: 5em;
+  }
+  #store .row {
+    margin-right: 3em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #store {
+    margin-top: 5em;
+  }
+  #store .row {
+    margin-right: 3em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
